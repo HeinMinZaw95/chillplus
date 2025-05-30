@@ -53,9 +53,6 @@
 .btn:hover{
     background-color: var(--white);
     border: 2px solid var(--primary-color);
-
-}
-.btn:hover button{
     color: #70b3e1;
 }
 
@@ -124,18 +121,24 @@ nav{
     justify-content: center;
     flex-direction: column;
     grid-area: 2rem;
-    background-color: var(--primary-color);
+    background-color: var(--white);
     transition: transform 0.5s;
     z-index: -1;
+
+}
+.nav_links ul{
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav_links.open{
     transform: translateY(100%);
+    justify-content: space-evenly;
+    height: 50dvh;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
 }
 
-.nav_links:hover{
-    color: var(--text-dark);
-}
 
 .nav_btns{
     display: none;
@@ -148,32 +151,17 @@ nav{
 }
 
 .nav_links a:hover{
-    color: var(--primary-color);
+    color: var(--primary-color-darl);
 }
 
 header{
     margin-top: 6rem;
-    padding-inline: 1rem;
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    background: var(--primary-color-darl);
 }
 
-header::before{
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: calc(100% - 2rem);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #090d28;
-    background-position: center center ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 3rem;
-    z-index: -1;
-}
 
 .header_container{
     display: grid;
@@ -226,14 +214,14 @@ header::before{
     border-radius: 100%;
 }
 .header_btns span{
-    color: var(--primary-color);
+    color: var(--white);
     font-size: 2rem;
     border-radius: 100%;
     transition: ease-in-out .5s;
 }
 .header_btns:hover span{
     transform: translateX(5px);
-    color: var(--extra-light);
+    color: var(--primary-color);
 }
 
 .header_btns a:hover{
@@ -710,6 +698,17 @@ footer{
 
 }
 
+@media (width < 540px){
+    body 
+        h1{
+        font-size: 3rem !important;
+    }
+        h2{
+            font-size: 1.5rem !important;
+        }
+    
+}
+
 @media (width > 540px) {
     
 
@@ -781,12 +780,12 @@ footer{
         gap: 2rem;
     }
     .nav_links a{
-        color: var(--text-dark);
+        color: var(--primary-color);
     }
 
     .nav_link
     .nav_links a:hover{
-        color: var(--primary-color-darl);
+        color: var(--primary-color);
     }
 
     .nav_links li:last-child{
