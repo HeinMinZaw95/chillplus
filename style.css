@@ -22,15 +22,15 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: 110dvh;
     width: 100vw;
     z-index: 99;
     background: white;
     opacity: 1;
-    transition: 1s;
+    transition: 1s 1s;
 }
 .lockclose{
-    transform: translateY(-100vh);
+    transform: translateY(-110vh);
 }
 .keys{
     display: grid;
