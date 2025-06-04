@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 .lock{
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -169,6 +169,7 @@ header{
     height: 110dvh;
     overflow: hidden;
 }
+
 header nav{
     display: flex;
     align-items: center;
@@ -183,9 +184,7 @@ header nav:hover{
     background-color: var(--white);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-header nav:hover ul li a{
-    color: var(--primary-color);
-}
+
 
 header nav .logo{
     width: 15rem;
@@ -195,45 +194,62 @@ header nav .logo{
     margin-bottom: 20px;
 }
 .nav_links{
-    width: 800px;
+    position: fixed;
+    top: 0;
+    right: -110%;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
     list-style: none;
-    background: #f3f4f655;
     padding: 1rem;
     border-radius: 1rem;
-    
+    background-color: #f3f4f6;
+    height: 100dvh;
+    transition: .5s;
+}
+.nav_links.open{
+    right: 0;
+}
+.nav_links li{
+    margin-left: 5rem;
+}
+.nav_btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: fit-content;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: var(--primary-light);
+        z-index: 5;
+        color: var(--extra-lights);
 }
 .down_list{
     width: 100%;
     left: 0;
-    height: 50vh;
-    position: absolute;
-    display: none;
+    display: flex;
+    flex-direction: column;
     list-style: none;
     justify-content: space-evenly;
-    background: #f3f4f6bb;
-    backdrop-filter: blur(20px);
-    margin-top: 3rem;
-    padding: 3rem 0 3rem 0;
-    border-top: 1px solid var(--primary-light);
     transition-delay: .5s;
     transition: .5s ease;
     opacity: 1;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 1rem;
 }
 
-.down_list li a{
-    font-size: 2rem !important;
-    font-weight: 600 !important;
-    color: var(--primary-color) !important;
+.down_list li{
+    margin-top: 1rem;
 }
+
 
 .nav_links li a{
     text-decoration: none;
     font-size: var(--font-normal);
     font-weight: 600;
-    color: var(--white);
+    color: var(--primary-light);
 }
 .nav_links li a i{
     margin-left: 5px;
@@ -1007,6 +1023,64 @@ footer{
     }
 
     */
+
+
+    .nav_links{
+        position: relative;
+    right: auto;
+    height: auto;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    background: #f3f4f655;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.nav_links li{
+    margin-left: 0;
+}
+.nav_btn{
+    display: none;
+}
+
+    .down_list{
+    position: absolute;
+    flex-direction: row;
+    left: calc(-12rem - 30%);
+    width: 100vw;
+    height: 50vh;
+    display: none;
+    list-style: none;
+    justify-content: space-evenly;
+    background: #f3f4f6bb;
+    backdrop-filter: blur(20px);
+    margin-top: 3rem;
+    padding: 3rem 0 3rem 0;
+    border-top: 1px solid var(--primary-light);
+    transition-delay: .5s;
+    transition: .5s ease;
+    opacity: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+    .down_list li a{
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--primary-color) !important;
+}
+
+header nav:hover ul li a{
+    color: var(--primary-color);
+}
+
+.nav_links li a{
+    text-decoration: none;
+    font-size: var(--font-normal);
+    font-weight: 600;
+    color: var(--white);
+}
 
     .destination_grid{
         grid-template-columns: repeat(3, 1fr);

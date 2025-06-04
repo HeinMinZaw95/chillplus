@@ -119,6 +119,14 @@ boxListProducts.addEventListener("mouseout", event =>{
 
 //Navbar End
 
+//Nav Button
+
+const navBtn = document.getElementById("nav_btn");
+
+navBtn.addEventListener("click", event =>{
+    navLink.classList.toggle("open");
+})
+
 
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
