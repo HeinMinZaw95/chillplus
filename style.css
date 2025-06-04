@@ -8,6 +8,11 @@
     --extra-light: #f3f4f6;
     --white: #ffffff;
     --max-width: 1200px;
+    --primary-dark : #090d28;
+    --primary-light : #4a90d0;
+    --white : #fcfcfc;
+    --font-normal : 1.2rem;
+    --font_title : 2rem;
 }
 
 *{
@@ -153,6 +158,95 @@ body{
     scroll-behavior: smooth;
 }
 
+
+body{
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 110dvh;
+    overflow: hidden;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    padding: 0 10% 0 10%;
+    height: 8rem;
+    justify-content: space-between;
+    background: transparent;
+    transition: 0.5s ease;
+    z-index: 10;
+}
+header nav:hover{
+    background-color: var(--white);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+header nav:hover ul li a{
+    color: var(--primary-color);
+}
+
+header nav .logo{
+    width: 15rem;
+    height: 5rem;
+    background: url(assets/logo.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+.nav_links{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background: #f3f4f655;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+.down_list{
+    width: 100%;
+    left: 0;
+    height: 50vh;
+    position: absolute;
+    display: none;
+    list-style: none;
+    justify-content: space-evenly;
+    background: #f3f4f6bb;
+    backdrop-filter: blur(20px);
+    margin-top: 3rem;
+    padding: 3rem 0 3rem 0;
+    border-top: 1px solid var(--primary-light);
+    transition-delay: .5s;
+    transition: .5s ease;
+    opacity: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.down_list li a{
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--primary-color) !important;
+}
+
+.nav_links li a{
+    text-decoration: none;
+    font-size: var(--font-normal);
+    font-weight: 600;
+    color: var(--white);
+}
+.nav_links li a i{
+    margin-left: 5px;
+    color: var(--primary-dark);
+}
+
+header .background_video{
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    z-index: -1;
+}
+/*
 nav{
     position: fixed;
     isolation: isolate;
@@ -300,6 +394,7 @@ header{
     color: var(--white);
     background-color: var(--primary-color);
 }
+*/
 
 
 .destination_container :is(.section_header, .section_description){
@@ -817,6 +912,8 @@ footer{
 }
 
 @media (width > 768px){
+    /*
+    
     nav{
         position: static;
         padding: 2rem 1rem;
@@ -908,6 +1005,8 @@ footer{
         height: 100%;
         width: unset;
     }
+
+    */
 
     .destination_grid{
         grid-template-columns: repeat(3, 1fr);

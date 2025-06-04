@@ -88,6 +88,37 @@ enter.onclick = function(){
     }
     
 }
+// Nav Bar
+
+const boxIndustry = document.getElementById("down_industry");
+const boxProducts = document.getElementById("down_products");
+const boxListIndustry = document.getElementById("down_list_industry");
+const boxListProducts = document.getElementById("down_list_products");
+const navLink = document.getElementById("nav_links");
+
+
+
+
+boxIndustry.addEventListener("mouseover", event =>{
+    boxListIndustry.style.display = "flex";
+    boxListProducts.style.display = "none";
+})
+boxListIndustry.addEventListener("mouseout", event =>{
+    boxListIndustry.style.display = "none";
+})
+
+boxProducts.addEventListener("mouseover", event =>{
+    boxListProducts.style.display = "flex";
+    boxListIndustry.style.display = "none";
+})
+boxListProducts.addEventListener("mouseout", event =>{
+    boxListProducts.style.display = "none";
+})
+
+
+
+//Navbar End
+
 
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
@@ -105,33 +136,14 @@ navLinks.addEventListener("click", (e)=>{
     menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+// Scroll Reveal
+
 const scrollRevealOption = {
     origin: "bottom",
     distance: "50px",
     duration: 1000,
 
 };
-
-ScrollReveal().reveal(".header_image img",{
-    ...scrollRevealOption,
-    origin: "right",
-    delay:1500,
-});
-
-ScrollReveal().reveal(".header_content p",{
-    ...scrollRevealOption,
-    delay:500,
-});
-
-ScrollReveal().reveal(".header_content h1",{
-    ...scrollRevealOption,
-    delay:500,
-});
-
-ScrollReveal().reveal(".header_btns",{
-    ...scrollRevealOption,
-    delay:1000,
-});
 
 ScrollReveal().reveal(".destination_card",{
     ...scrollRevealOption,
