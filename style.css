@@ -1048,7 +1048,7 @@ footer{
     .down_list{
     position: absolute;
     flex-direction: row;
-    left: calc(-12rem - 30%);
+    left: calc(- 12rem - 30%);
     width: 100vw;
     height: 50vh;
     display: none;
