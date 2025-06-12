@@ -1,3 +1,64 @@
+// Scroll Reveal
+
+const scrollRevealOption = {
+    origin: "bottom",
+    distance: "50px",
+    duration: 1000,
+
+};
+
+ScrollReveal().reveal(".destination_card",{
+    ...scrollRevealOption,
+    interval:500,
+});
+
+ScrollReveal().reveal(".journey_card",{
+    ...scrollRevealOption,
+    interval:500,
+});
+
+ScrollReveal().reveal(".showcase_image img",{
+    ...scrollRevealOption,
+    origin: "left",
+});
+
+ScrollReveal().reveal(".showcase_content p",{
+    ...scrollRevealOption,
+    delay:1000,
+});
+
+ScrollReveal().reveal(".showcase_content h4",{
+    ...scrollRevealOption,
+    delay:500,
+});
+
+ScrollReveal().reveal(".showcase_btn",{
+    ...scrollRevealOption,
+    origin: "bottom",
+    delay:1500,
+});
+
+ScrollReveal().reveal(".banner_card",{
+    ...scrollRevealOption,
+    interval:500,
+});
+
+ScrollReveal().reveal(".discover_card",{
+    ...scrollRevealOption,
+    interval:500,
+});
+
+const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+})
+
+
+
+
+
+
 const answer = 153519;
 const k1 = document.getElementById("one");
 const k2 = document.getElementById("two");
@@ -144,61 +205,6 @@ navLinks.addEventListener("click", (e)=>{
     menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-// Scroll Reveal
-
-const scrollRevealOption = {
-    origin: "bottom",
-    distance: "50px",
-    duration: 1000,
-
-};
-
-ScrollReveal().reveal(".destination_card",{
-    ...scrollRevealOption,
-    interval:500,
-});
-
-ScrollReveal().reveal(".journey_card",{
-    ...scrollRevealOption,
-    interval:500,
-});
-
-ScrollReveal().reveal(".showcase_image img",{
-    ...scrollRevealOption,
-    origin: "left",
-});
-
-ScrollReveal().reveal(".showcase_content p",{
-    ...scrollRevealOption,
-    delay:1000,
-});
-
-ScrollReveal().reveal(".showcase_content h4",{
-    ...scrollRevealOption,
-    delay:500,
-});
-
-ScrollReveal().reveal(".showcase_btn",{
-    ...scrollRevealOption,
-    origin: "bottom",
-    delay:1500,
-});
-
-ScrollReveal().reveal(".banner_card",{
-    ...scrollRevealOption,
-    interval:500,
-});
-
-ScrollReveal().reveal(".discover_card",{
-    ...scrollRevealOption,
-    interval:500,
-});
-
-const swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-})
 
 /* gsap.registerPlugin(ScrollTrigger),
 
