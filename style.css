@@ -340,14 +340,32 @@ header .background_video{
     transform: scale(1.2);
 }
 
-.slogram{
+.slogram.fishseafood{
+    background: url(assets/fish_seafood.jpg);
     padding-inline: 1rem;
     margin: auto;
     height: 500px;
     width: 98%;
     display: flex;
     flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5rem;  
+    background-attachment: fixed;
+    background-position: right;
+
+}
+.slogram.home{
     background: url(assets/Mackerel.jpg);
+        padding-inline: 1rem;
+    margin: auto;
+    height: 500px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: center;
@@ -357,7 +375,8 @@ header .background_video{
     background-attachment: fixed;
     background-position: right;
 }
-.slogram_screen{
+
+.slogram .slogram_screen{
     top: 0;
     left: 0;
     height: 100%;
