@@ -208,9 +208,7 @@ header nav .logo{
 .down_list li{
     margin-left: 5rem;
 }
-.down_list li a h4{
-    
-}
+
 .nav_btn{
         position: fixed;
         top: 5px;
@@ -295,10 +293,38 @@ header .background_video{
 
 }
 
+.about_container img{
+    border-radius: 1rem;
+}
+.about_content h2,.about_content2 h2{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.about_content p,.about_content2 p{
+    margin-bottom: 2rem;
+}
+
+.section_carrier{
+    width: 100%;
+    height: 200px;
+    background-color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.section_carrier h4{
+    color: var(--extra-light);
+}
+.video_container_about iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+}
 
 .destination_container :is(.section_header, .section_description){
     text-align: left;
-
     margin-inline: unset;
 }
 .destination_container h2{
@@ -826,7 +852,7 @@ footer{
     body 
         h1{
         font-size: 3rem !important;
-    }
+        }
         h2{
             font-size: 1.5rem !important;
         }
@@ -857,16 +883,16 @@ footer{
 
 @media (width > 540px) {
 .nav_btn{
-        top: 15px;
-        right: 15px;
-        width: fit-content;
-        height: 50px;
-        width: 80px;
-        border-radius: 1rem;
-        border: none;
-        background-color: var(--primary-light);
-        z-index: 5;
-        color: var(--extra-lights);
+    top: 15px;
+    right: 15px;
+    width: fit-content;
+    height: 50px;
+    width: 80px;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--primary-light);
+    z-index: 5;
+    color: var(--extra-lights);
 }
  .down_list li a{
     height: 30px;
@@ -878,7 +904,16 @@ footer{
     height: 70px;
     max-width: 150px;
 }
-
+    .about_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about_container .about_content2{
+        grid-column-start: 1;
+        grid-row: 1;
+    }
+    .about_container .about_image2{
+        grid-column-start: 2;
+    }
     .destination_grid{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1002,6 +1037,14 @@ header nav:hover ul li a{
     font-weight: 600;
     color: var(--white);
 }
+
+    .about_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        grid-gap: 1rem;
+    }
+
     .destination_grid{
         grid-template-columns: repeat(3, 1fr);
     }

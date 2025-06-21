@@ -2,15 +2,43 @@
 
 const scrollRevealOption = {
     origin: "bottom",
-    distance: "50px",
+    distance: "150px",
     duration: 1000,
 
 };
 
-ScrollReveal().reveal(".destination_card",{
+ScrollReveal().reveal(".about_us",{
     ...scrollRevealOption,
-    interval:500,
+    interval: 100,
+    origin: "right",
 });
+
+ScrollReveal().reveal(".about_image",{
+    ...scrollRevealOption,
+    interval: 1000,
+    origin: "left",
+});
+
+ScrollReveal().reveal(".about_content",{
+    ...scrollRevealOption,
+    interval: 1000,
+    delay: 500,
+    origin: "right",
+});
+
+ScrollReveal().reveal(".about_content2",{
+    ...scrollRevealOption,
+    interval: 1000,
+    delay: 500,
+    origin: "left",
+});
+
+ScrollReveal().reveal(".about_image2",{
+    ...scrollRevealOption,
+    interval: 1000,
+    origin: "right",
+});
+
 
 ScrollReveal().reveal(".journey_card",{
     ...scrollRevealOption,
