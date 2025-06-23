@@ -188,21 +188,47 @@ const navLink = document.getElementById("nav_links");
 
 
 
-boxIndustry.addEventListener("mouseover", event =>{
+// boxIndustry.addEventListener("mouseover", event =>{
+//     boxListIndustry.style.display = "flex";
+//     boxListProducts.style.display = "none";
+// })
+// boxListIndustry.addEventListener("mouseout", event =>{
+//     boxListIndustry.style.display = "none";
+// })
+
+// boxProducts.addEventListener("mouseover", event =>{
+//     boxListProducts.style.display = "flex";
+//     boxListIndustry.style.display = "none";
+// })
+// boxListProducts.addEventListener("mouseout", event =>{
+//     boxListProducts.style.display = "none";
+// })
+
+boxIndustry.addEventListener("click", event => {
     boxListIndustry.style.display = "flex";
     boxListProducts.style.display = "none";
 })
-boxListIndustry.addEventListener("mouseout", event =>{
-    boxListIndustry.style.display = "none";
-})
-
-boxProducts.addEventListener("mouseover", event =>{
+boxProducts.addEventListener("click", event => {
     boxListProducts.style.display = "flex";
     boxListIndustry.style.display = "none";
 })
-boxListProducts.addEventListener("mouseout", event =>{
+boxIndustry.addEventListener("mouseenter", event => {
+    boxListIndustry.style.display = "flex";
     boxListProducts.style.display = "none";
 })
+boxProducts.addEventListener("mouseenter", event => {
+    boxListProducts.style.display = "flex";
+    boxListIndustry.style.display = "none";
+})
+boxListIndustry.addEventListener("mouseleave", event => {
+    boxListProducts.style.display = "none";
+    boxListIndustry.style.display = "none";
+})
+boxListProducts.addEventListener("mouseleave", event => {
+    boxListProducts.style.display = "none";
+    boxListIndustry.style.display = "none";
+})
+
 
 
 

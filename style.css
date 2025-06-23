@@ -52,9 +52,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        user-select: none;
-        overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    overflow: hidden;
 
 }
 .display_text{
@@ -178,8 +178,6 @@ header nav{
     z-index: 10;
 }
 
-
-
 header nav .logo{
     width: 150px;
     height: 50px;
@@ -196,17 +194,22 @@ header nav .logo{
     flex-direction: column;
     justify-content: space-evenly;
     list-style: none;
-    padding: 10px;
+
     border-radius: 1rem;
     background-color: #f3f4f6;
     height: 100dvh;
     transition: .5s;
+    z-index: 1;
+}
+.nav_links li{
+    border-bottom: 1px solid var(--primary-color) ;
 }
 .nav_links.open{
     right: 0;
 }
 .down_list li{
     margin-left: 5rem;
+    border: none;
 }
 
 .nav_btn{
@@ -219,7 +222,7 @@ header nav .logo{
         border-radius: 1rem;
         border: none;
         background-color: var(--primary-light);
-        z-index: 5;
+        z-index: 11;
         color: var(--extra-lights);
 }
 .down_list{
@@ -237,9 +240,6 @@ header nav .logo{
 
 .down_list li{
     margin-top: 1rem;
-}
-.down_list li a img {
-    fill: #090d28;
 }
 .down_list li a img:hover {
     animation: picto .5s;
@@ -266,31 +266,58 @@ header nav .logo{
     margin-left: 5px;
     color: var(--primary-dark);
 }
+header{
+    height: fit-content !important;
+    overflow: hidden;
+}
 
 header .background_video{
     display: flex;
     top: 0;
-    width: 100%;
     z-index: -1;
+    width: 100%;
 }
 .head_banner{
     width: 100%;
     max-height: 100vh;
-    image-rendering:crisp-edges;
-
 }
 .banner_img{
+    width: 100%;
+    height: 60vh;
     position: relative;
     z-index: -5;
+    overflow: hidden;
+
 }
+.banner_img.poultry{
+    background: url(assets/Poultry.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner_img.dough{
+    background: url(assets/0e30f2931f2c2190d1f00113c6724d60.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner_img.fruit{
+    background: url(assets/Fruits-chiller.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner_img.seafood{
+    background: url(assets/fish_seafood.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .imgbtn{
     position: absolute;
     bottom: -1px;
     height: auto;
 }
- .wave{
+.wave{
     width: 100%;
-
 }
 
 .about_container img{
@@ -465,7 +492,7 @@ header .background_video{
     opacity: .8;
 }
 .slogram_content{
-    z-index: 5;
+    z-index: 1;
 }
 .slogram h2{
     color: var(--white);
@@ -849,40 +876,37 @@ footer{
 
 @media (width < 540px){
     
-    body 
-        h1{
-        font-size: 3rem !important;
-        }
-        h2{
-            font-size: 1.5rem !important;
-        }
-        .home{
-            height: 70vh;
-        }
-        .nav_links{
-            padding: 0;
-            margin: 0;
-        }
-        header{
-            height: 60vh;
-        }
-
-}
+body 
+    h1{
+    font-size: 3rem !important;
+    }
+    h2{
+    font-size: 1.5rem !important;
+    }
+    .home{
+    height: 70vh;
+    }
+    .nav_links{
+    padding: 0;
+    margin: 0;
+    }
+    header{
+    height: 60vh;
+    }
+    }
  .down_list li a{
     height: 30px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
     gap: 10px;
-}
+    }
 .down_list li a img{
     height: 20px;
     max-width: 50px;
-}
-    
-
+    }
 @media (width > 540px) {
-.nav_btn{
+    .nav_btn{
     top: 15px;
     right: 15px;
     width: fit-content;
@@ -893,17 +917,18 @@ footer{
     background-color: var(--primary-light);
     z-index: 5;
     color: var(--extra-lights);
-}
- .down_list li a{
+    }
+    .nav_links{
+    padding: 10px !important; 
+    }
+
+    .down_list li a{
     height: 30px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
-}
-.down_list li a img{
-    height: 70px;
-    max-width: 150px;
-}
+    }
+
     .about_container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -942,17 +967,12 @@ footer{
     .footer_col:last-child{
         grid-area: 2/1/3/2;
     }
-
-
-    
-
-
-}
+    }
 
 @media (width > 768px){
 li a{
     font-size: 1rem !important;
-}
+    }
 nav{
     position: absolute;
     width: 100% !important;
@@ -962,8 +982,7 @@ nav{
     padding: 30px !important;
     justify-content: space-between !important;
     background: none !important;
- 
-}
+    }
 
 .nav_links{
     position: relative;
@@ -974,15 +993,27 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    background: #f3f4f655;
+    background: #4a90d099;
     padding: 1rem;
     border-radius: 1rem;
-}
+    }
 nav:hover{
     background-color: var(--white) !important;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
+    }
+nav:hover .nav_links{
+    background: var(--white);
+    }
+    .nav_links li{
+    border-bottom: none ;
+    }
 
+/* .down_industry:hover ul{
+    display: flex;
+}
+.down_products:hover ul{
+    display: flex;
+} */
 .down_list{
     position: absolute;
     flex-direction: row;
@@ -1013,6 +1044,14 @@ nav:hover{
     justify-content: space-evenly;
     align-items: center;
 }
+    .down_list li a img{
+    height: 70px;
+    max-width: 150px;
+    }
+    .down_list.products li a img{
+    width: 100%;
+    height: auto;
+    }
 .nav_links li{
     margin-left: 0;
 }
@@ -1021,7 +1060,7 @@ nav:hover{
 }
 
 
-    .down_list li a{
+.down_list li a{
     font-size: 2rem !important;
     font-weight: 600 !important;
     color: var(--primary-color) !important;
@@ -1076,13 +1115,20 @@ header nav:hover ul li a{
     .footer_col:last-child{
         grid-area: unset;
     }
-
-
 }
 
 @media (width > 1200px){
     header nav{
     display: flex;
     padding: 1rem;
+    }
+    .banner_img{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -5;
+    overflow: hidden;
+    background: url(assets/Poultry.jpg) no-repeat;
+    background-size: cover;
     }
 }
