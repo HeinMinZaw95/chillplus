@@ -80,6 +80,42 @@ const swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
+    centeredSlides: true,
+     autoplay: {
+        delay: 3000, // 2000 milliseconds = 2 seconds
+        disableOnInteraction: false, // Continue autoplay even after user interaction
+    },
+
+
+     pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+        // when window width is >= 320px (e.g., most phones)
+        540: {
+            slidesPerView: 'auto', // Show 1 slide
+            spaceBetween: 10, // Adjust space between if needed
+            centeredSlides: true, // Crucial for centering when only 1 slide is shown
+        },
+        // when window width is >= 768px (e.g., tablets)
+        768: {
+            slidesPerView: 2, // Show 2 slides
+            spaceBetween: 20,
+            centeredSlides: false, // Or true, depending on desired look
+        },
+        // when window width is >= 1024px (e.g., desktops)
+        1200: {
+            slidesPerView: 3, // Show 3 slides
+            spaceBetween: 20,
+            centeredSlides: false, // Typically false for 3+ slides filling width
+        },
+    },
 })
 
 
@@ -260,22 +296,22 @@ navLinks.addEventListener("click", (e)=>{
 });
 
 
-/* gsap.registerPlugin(ScrollTrigger),
+// /* gsap.registerPlugin(ScrollTrigger),
 
-gsap.to(".header_image",{
-   x: -400,
-    duration: 3,
-    scrollTrigger: {
-        trigger: ".header_content",
-        start: "top 10",
-        scrub: 10,
-        pin: true,
-        toggleActions: "restart none none none",
+// gsap.to(".header_image",{
+//    x: -400,
+//     duration: 3,
+//     scrollTrigger: {
+//         trigger: ".header_content",
+//         start: "top 10",
+//         scrub: 10,
+//         pin: true,
+//         toggleActions: "restart none none none",
 
 
-        //toggleActions: "restart pause resume complete",
-        //              onEnter     onLeave     onEnterBack     onLeaveBack
-        markers: true,
-        toggleClass: "red"
-    }
-}) */
+//         //toggleActions: "restart pause resume complete",
+//         //              onEnter     onLeave     onEnterBack     onLeaveBack
+//         markers: true,
+//         toggleClass: "red"
+//     }
+// }) */

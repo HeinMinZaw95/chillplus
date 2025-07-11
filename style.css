@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 .lock{
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -626,32 +626,55 @@ header .background_video{
 .banner_container{
     display: grid;
     gap: 2rem;
+    min-height: 550px;
 
 }
 
 .banner_card{
-    display: flex;
     align-items: center;
     padding: 2rem 1rem;
     text-align: center;
     background-color: var(--extra-light);
     border-radius: 2rem;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0,  0.1);
-    gap: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0,  0.1);
+    gap: 3rem;
+    cursor: pointer;
+    transition: 1s;
+    height: 300px;
+
 }
+
+
 .banner_card img{
     max-width: 80px;
 }
 
-.banner_card h2{
+.keyfeature_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.keyfeature_content h2{
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-dark);
 }
 
 .banner_card p{
-    color: var(--text-light);
+    margin-top: 1rem;
+    text-align: left;
+    margin-inline: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 1rem;
+    opacity: 1;
+    transition: .5s;
+    box-shadow: 0 0 10px rgba(0, 00, 0, 0.1);
+    z-index: 100;
 }
+
 
 .discover_grid{
     margin-top: 4rem;
@@ -675,7 +698,7 @@ header .background_video{
     color: var(--primary-color);
     background-color: rgba(40, 135, 255, 0.1);
 }
-.discover_card:hover{
+.discover_card.picto:hover:hover{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -968,6 +991,11 @@ body
         grid-area: 2/1/3/2;
     }
     }
+@media (width < 768px){
+        .discover_card.blank{
+            display: none;
+        }
+}
 
 @media (width > 768px){
 li a{
@@ -1163,7 +1191,7 @@ header nav:hover ul li a{
     }
 
     .banner_container{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .discover_grid{
