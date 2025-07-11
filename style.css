@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 .lock{
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -597,6 +597,7 @@ header .background_video{
     max-width: 400px;
     margin-inline: auto;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 .showcase_content{
     min-height: 320px;
