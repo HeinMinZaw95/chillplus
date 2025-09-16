@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 .lock{
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1222,3 +1222,4 @@ header nav:hover ul li a{
     background-size: cover;
     }
 }
+
